@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://polymathica.rahulkumardas.in/sitemap.xml
