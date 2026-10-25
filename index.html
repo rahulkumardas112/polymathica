@@ -191,23 +191,24 @@ footer p{margin:0 0 8px;opacity:.9;max-width:36ch}
 </div></header>
 
 <nav class="tabs" aria-label="Journal sections"><div class="wrap" role="tablist">
-  <button role="tab" data-go="home">Journal home</button>
-  <button role="tab" data-go="cfp">Call for papers</button>
-  <button role="tab" data-go="aims">Aims &amp; scope</button>
-  <button role="tab" data-go="board">Editorial board</button>
-  <button role="tab" data-go="authors">For authors</button>
-  <button role="tab" data-go="review">Peer review</button>
-  <button role="tab" data-go="reviewers">For reviewers</button>
-  <button role="tab" data-go="ethics">Ethics &amp; policies</button>
-  <button role="tab" data-go="issues">Issues</button>
-  <button role="tab" data-go="faq">FAQ</button>
-  <button role="tab" data-go="contact">Contact</button>
+  <button id="tab-home" role="tab" aria-controls="panel-home" aria-selected="true" tabindex="0" data-go="home">Journal home</button>
+  <button id="tab-cfp" role="tab" aria-controls="panel-cfp" aria-selected="false" tabindex="-1" data-go="cfp">Call for papers</button>
+  <button id="tab-aims" role="tab" aria-controls="panel-aims" aria-selected="false" tabindex="-1" data-go="aims">Aims &amp; scope</button>
+  <button id="tab-board" role="tab" aria-controls="panel-board" aria-selected="false" tabindex="-1" data-go="board">Editorial board</button>
+  <button id="tab-authors" role="tab" aria-controls="panel-authors" aria-selected="false" tabindex="-1" data-go="authors">For authors</button>
+  <button id="tab-review" role="tab" aria-controls="panel-review" aria-selected="false" tabindex="-1" data-go="review">Peer review</button>
+  <button id="tab-reviewers" role="tab" aria-controls="panel-reviewers" aria-selected="false" tabindex="-1" data-go="reviewers">For reviewers</button>
+  <button id="tab-ethics" role="tab" aria-controls="panel-ethics" aria-selected="false" tabindex="-1" data-go="ethics">Ethics &amp; policies</button>
+  <button id="tab-issues" role="tab" aria-controls="panel-issues" aria-selected="false" tabindex="-1" data-go="issues">Issues</button>
+  <button id="tab-faq" role="tab" aria-controls="panel-faq" aria-selected="false" tabindex="-1" data-go="faq">FAQ</button>
+  <button id="tab-privacy" role="tab" aria-controls="panel-privacy" aria-selected="false" tabindex="-1" data-go="privacy">Privacy</button>
+  <button id="tab-contact" role="tab" aria-controls="panel-contact" aria-selected="false" tabindex="-1" data-go="contact">Contact</button>
 </div></nav>
 
 <div class="wrap layout">
 <main>
 
-<section data-view="home">
+<section id="panel-home" role="tabpanel" aria-labelledby="tab-home" data-view="home">
   <div class="facts" aria-label="Journal at a glance">
     <div><b>₹0</b><span>Article processing charge</span></div>
     <div><b>2+</b><span>Independent reviewers per paper</span></div>
@@ -234,7 +235,7 @@ footer p{margin:0 0 8px;opacity:.9;max-width:36ch}
     <li><b>Rigorous review.</b> Every research article is evaluated by at least two independent reviewers under double-blind review.</li>
     <li><b>Clear timelines.</b> First decision targeted within 6 weeks of submission.</li>
     <li><b>Authors keep copyright.</b> Articles are published under the Creative Commons Attribution 4.0 licence.</li>
-    <li><b>Permanent identifiers.</b> DOIs will be assigned to every article once Crossref membership is in place.</li>
+    <li><b>Persistent identifiers.</b> The journal plans to register DOIs for eligible articles after completing registration with a DOI registration agency and meeting its requirements.</li>
   </ul>
 
   <h3>Article types</h3>
@@ -250,7 +251,7 @@ footer p{margin:0 0 8px;opacity:.9;max-width:36ch}
   </table></div>
 </section>
 
-<section data-view="cfp" hidden>
+<section id="panel-cfp" role="tabpanel" aria-labelledby="tab-cfp" data-view="cfp" hidden>
   <h2>Call for papers: Volume 1, Issue 1</h2>
   <p class="lede">Polymathica invites original research articles, review articles, case studies and short communications for its inaugural issue, to be published in March 2027.</p>
   <div class="tbl"><table><tbody>
@@ -277,7 +278,7 @@ footer p{margin:0 0 8px;opacity:.9;max-width:36ch}
   <p>Prepare your manuscript following the <a href="#authors" data-go="authors">author guidelines</a> and send it to the editorial office listed on the <a href="#contact" data-go="contact">contact page</a> with the subject line "Submission: [short title]".</p>
 </section>
 
-<section data-view="aims" hidden>
+<section id="panel-aims" role="tabpanel" aria-labelledby="tab-aims" data-view="aims" hidden>
   <h2>Aims and scope</h2>
   <p class="lede">Polymathica aims to publish rigorous, readable research that connects ideas across disciplines and contributes to theory, policy and practice.</p>
   <h3>Aims</h3>
@@ -307,7 +308,7 @@ footer p{margin:0 0 8px;opacity:.9;max-width:36ch}
   <p>We do not publish purely descriptive reports without analysis, opinion pieces without scholarly grounding, or work already published or under review elsewhere.</p>
 </section>
 
-<section data-view="board" hidden>
+<section id="panel-board" role="tabpanel" aria-labelledby="tab-board" data-view="board" hidden>
   <h2>Editorial board</h2>
   <p>The editorial board is being formed for the inaugural volume. Scholars with a PhD and a record of peer-reviewed publication are invited to apply for associate editor and reviewer positions.</p>
   <div class="board">
@@ -331,14 +332,14 @@ footer p{margin:0 0 8px;opacity:.9;max-width:36ch}
   </ul>
 </section>
 
-<section data-view="authors" hidden>
+<section id="panel-authors" role="tabpanel" aria-labelledby="tab-authors" data-view="authors" hidden>
   <h2>Submission guidelines</h2>
   <p class="lede">Please read these guidelines before submitting. Manuscripts that do not follow them may be returned without review.</p>
   <h3>Before you submit</h3>
   <ul>
     <li>The work is original, unpublished and not under review elsewhere.</li>
     <li>All authors have approved the manuscript and agree to its submission.</li>
-    <li>The similarity index is below 10%, excluding references and quoted material.</li>
+    <li>The manuscript must be original and properly cited. Similarity reports are assessed in context; no single similarity percentage by itself determines whether plagiarism has occurred.</li>
     <li>Any use of AI tools is disclosed (see <a href="#ethics" data-go="ethics">Ethics &amp; policies</a>).</li>
   </ul>
   <h3>Manuscript preparation</h3>
@@ -363,7 +364,7 @@ footer p{margin:0 0 8px;opacity:.9;max-width:36ch}
   <p>Polymathica charges no submission fee, review fee or article processing charge.</p>
 </section>
 
-<section data-view="review" hidden>
+<section id="panel-review" role="tabpanel" aria-labelledby="tab-review" data-view="review" hidden>
   <h2>Peer review process</h2>
   <p class="lede">Polymathica uses double-blind peer review: reviewers do not know the authors' identities, and authors do not know the reviewers'.</p>
   <ol class="steps">
@@ -387,7 +388,7 @@ footer p{margin:0 0 8px;opacity:.9;max-width:36ch}
   <p>Authors may appeal a decision once, in writing, within 30 days. Appeals are reviewed by an editor not involved in the original decision.</p>
 </section>
 
-<section data-view="reviewers" hidden>
+<section id="panel-reviewers" role="tabpanel" aria-labelledby="tab-reviewers" data-view="reviewers" hidden>
   <h2>Guidelines for reviewers</h2>
   <p class="lede">Reviewers are the foundation of the journal's quality. Thank you for giving your time and expertise.</p>
   <h3>Before you accept</h3>
@@ -414,7 +415,7 @@ footer p{margin:0 0 8px;opacity:.9;max-width:36ch}
   <p>Reviewers receive a certificate of reviewing for each completed review and are acknowledged annually on this website.</p>
 </section>
 
-<section data-view="faq" hidden>
+<section id="panel-faq" role="tabpanel" aria-labelledby="tab-faq" data-view="faq" hidden>
   <h2>Frequently asked questions</h2>
   <details open><summary>Does Polymathica charge any fee?</summary><p>No. There is no submission fee, review fee or article processing charge. Reading is also free.</p></details>
   <details><summary>Is the journal peer reviewed?</summary><p>Yes. Every research article is reviewed by at least two independent experts under double-blind review.</p></details>
@@ -427,13 +428,13 @@ footer p{margin:0 0 8px;opacity:.9;max-width:36ch}
   <details><summary>Who owns the copyright?</summary><p>Authors keep copyright. Articles are published under CC BY 4.0.</p></details>
 </section>
 
-<section data-view="ethics" hidden>
+<section id="panel-ethics" role="tabpanel" aria-labelledby="tab-ethics" data-view="ethics" hidden>
   <h2>Publication ethics and policies</h2>
   <p class="lede">Polymathica follows the Core Practices of the Committee on Publication Ethics (COPE) for authors, editors and reviewers.</p>
   <h3>Open access statement</h3>
   <p>All content is freely available without charge to readers or their institutions. Readers may read, download, copy, distribute, print, search or link to the full texts of articles without asking prior permission from the publisher or the author, in line with the Budapest Open Access Initiative definition of open access.</p>
   <h3>Plagiarism</h3>
-  <p>All submissions are checked with similarity-detection software. Manuscripts with a similarity index above 10% (excluding references) or any evidence of copied text, data or ideas are rejected. Plagiarism discovered after publication leads to retraction.</p>
+  <p>Submissions may be checked using similarity-detection tools. Reports are assessed in context, including quotation, references, common terminology and source attribution. No single similarity percentage by itself establishes plagiarism. Substantiated plagiarism or other serious misconduct may lead to rejection before publication or a correction, expression of concern or retraction after publication, following a fair review of the evidence.</p>
   <h3>Authorship</h3>
   <p>Everyone listed as an author must have made a substantial contribution to the work and approved the final version. Changes to the author list after submission require written agreement from all authors.</p>
   <h3>Use of AI tools</h3>
@@ -448,11 +449,11 @@ footer p{margin:0 0 8px;opacity:.9;max-width:36ch}
   <p>Errors that affect the findings are corrected with a published correction notice. Articles with serious misconduct or unreliable findings are retracted, with the original kept online and clearly marked.</p>
   <h3>Copyright and licence</h3>
   <p>Authors keep copyright. Articles are published under the Creative Commons Attribution 4.0 International licence (CC BY 4.0), which allows anyone to share and adapt the work with proper credit.</p>
-  <h3>Archiving</h3>
-  <p>Published content will be deposited with a long-term digital preservation service so it stays available if the journal ceases publication.</p>
+  <h3>Digital preservation</h3>
+  <p>A long-term digital preservation arrangement is planned. The journal will name the preservation service here once an arrangement is active. Until then, authors should retain their own copies of accepted manuscripts and published files.</p>
 </section>
 
-<section data-view="issues" hidden>
+<section id="panel-issues" role="tabpanel" aria-labelledby="tab-issues" data-view="issues" hidden>
   <h2>Issues</h2>
   <p>Polymathica publishes four issues a year.</p>
   <div class="tbl"><table>
@@ -472,14 +473,31 @@ footer p{margin:0 0 8px;opacity:.9;max-width:36ch}
   <p>Articles will appear here once published.</p>
 </section>
 
-<section data-view="contact" hidden>
+<section id="panel-privacy" role="tabpanel" aria-labelledby="tab-privacy" data-view="privacy" hidden>
+  <h2>Privacy notice</h2>
+  <p class="lede">Polymathica aims to handle author, reviewer and visitor information responsibly and only for legitimate journal and website purposes.</p>
+  <h3>Information we receive</h3>
+  <p>If you email the editorial office, we receive the information and attachments you choose to send, such as your name, institutional affiliation, email address, manuscript and correspondence. Please do not include sensitive personal information unless it is necessary for your submission.</p>
+  <h3>How information is used</h3>
+  <p>Information sent to the editorial office is used to respond to enquiries, assess submissions, coordinate peer review, communicate editorial decisions, publish accepted work and maintain publication records. Manuscripts and reviewer reports should be shared only with people involved in the editorial process.</p>
+  <h3>Website services</h3>
+  <p>This website is hosted using GitHub Pages. The page loads fonts from Google Fonts, which may receive standard technical request information from your browser. Hosting and service providers may process technical logs under their own policies. The current website code does not include an analytics or advertising tracking script.</p>
+  <h3>Retention and security</h3>
+  <p>Editorial correspondence and publication records may be retained as needed for the integrity of the scholarly record, dispute handling and applicable legal obligations. Access to unpublished manuscripts and reviewer information should be limited to authorised editorial personnel. Email is not a secure channel for highly sensitive information.</p>
+  <h3>Your requests</h3>
+  <p>For a question about personal information in a submission or editorial correspondence, contact <a href="mailto:polymathica@rahulkumardas.in?subject=Privacy%20enquiry">polymathica@rahulkumardas.in</a>. Please identify the correspondence concerned. Requests will be considered subject to publication ethics, record keeping and applicable law.</p>
+  <h3>Updates</h3>
+  <p>This notice may be updated when the journal introduces additional submission, analytics, payment or editorial systems. Any new system should be reflected here before it is used.</p>
+</section>
+
+<section id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" data-view="contact" hidden>
   <h2>Contact the editorial office</h2>
   <p>Send submissions, board applications and general enquiries to the editorial office.</p>
   <div class="tbl"><table><tbody>
     <tr><th>Publisher</th><td>Rahul Kumar Das, on behalf of Polymathica</td></tr>
     <tr><th>Managing Editor</th><td>Rahul Kumar Das</td></tr>
     <tr><th>Address</th><td>Department of Accountancy, Lakhimpur Commerce College, North Lakhimpur, Assam, India</td></tr>
-    <tr><th>Email</th><td><span class="sel">polymathica@rahulkumardas.in</span></td></tr>
+    <tr><th>Email</th><td><a href="mailto:polymathica@rahulkumardas.in">polymathica@rahulkumardas.in</a></td></tr>
     <tr><th>Website</th><td><a href="https://polymathica.rahulkumardas.in/">polymathica.rahulkumardas.in</a></td></tr>
   </tbody></table></div>
   <h3>Email subject lines</h3>
@@ -489,6 +507,9 @@ footer p{margin:0 0 8px;opacity:.9;max-width:36ch}
     <li>Reviewer application</li>
     <li>Query: [manuscript ID]</li>
   </ul>
+  <h3>Institutional partnerships and sponsorship</h3>
+  <p>Polymathica welcomes enquiries from universities, research centres, academic associations and scholarly events interested in supporting open research, special issues or conference proceedings. Sponsorship and service arrangements do not influence peer review, editorial decisions or acceptance.</p>
+  <p><a href="mailto:polymathica@rahulkumardas.in?subject=Institutional%20partnership%20enquiry">Enquire about an institutional partnership</a></p>
   <h3>Cite this journal</h3>
   <div class="copy"><code id="cite">Polymathica: Journal of Multidisciplinary Research. Assam, India. https://polymathica.rahulkumardas.in/</code><button type="button" id="copybtn">Copy</button></div>
 </section>
@@ -535,6 +556,7 @@ footer p{margin:0 0 8px;opacity:.9;max-width:36ch}
       <li><a href="#ethics" data-go="ethics">Publication ethics</a></li>
       <li><a href="#ethics" data-go="ethics">Open access &amp; licence</a></li>
       <li><a href="#contact" data-go="contact">Contact</a></li>
+      <li><a href="#privacy" data-go="privacy">Privacy notice</a></li>
     </ul></div>
   </div>
   <div class="fbase">
@@ -550,11 +572,11 @@ footer p{margin:0 0 8px;opacity:.9;max-width:36ch}
   function show(id,scroll){
     if(!views.some(v=>v.dataset.view===id)) id='home';
     views.forEach(v=>v.hidden=v.dataset.view!==id);
-    tabs.forEach(t=>t.setAttribute('aria-selected',t.dataset.go===id));
+    tabs.forEach(t=>{const active=t.dataset.go===id;t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1;});
     if(scroll){
       const top=document.querySelector('nav.tabs').offsetTop;
       window.scrollTo({top:window.scrollY>top?top:window.scrollY});
-      try{history.replaceState(null,'','#'+id)}catch(e){}
+      try{history.pushState(null,'','#'+id)}catch(e){}
     }
   }
   document.addEventListener('click',e=>{
@@ -562,6 +584,20 @@ footer p{margin:0 0 8px;opacity:.9;max-width:36ch}
     e.preventDefault(); show(el.dataset.go,true);
   });
   show((location.hash||'').slice(1)||'home',false);
+  window.addEventListener('popstate',()=>show((location.hash||'').slice(1)||'home',false));
+  document.querySelector('nav.tabs [role="tablist"]').addEventListener('keydown',e=>{
+    if(!['ArrowRight','ArrowLeft','Home','End'].includes(e.key)) return;
+    const current=tabs.indexOf(document.activeElement);
+    if(current<0) return;
+    e.preventDefault();
+    let next=current;
+    if(e.key==='ArrowRight') next=(current+1)%tabs.length;
+    if(e.key==='ArrowLeft') next=(current-1+tabs.length)%tabs.length;
+    if(e.key==='Home') next=0;
+    if(e.key==='End') next=tabs.length-1;
+    tabs[next].focus();
+    show(tabs[next].dataset.go,true);
+  });
   const b=document.getElementById('copybtn');
   b.addEventListener('click',()=>{
     const t=document.getElementById('cite').textContent;
